@@ -5,9 +5,8 @@ function swap(a, b){
     a = b;
     b = num;
     
-    
     //dont change below code
-    console.log('a value is =', a);
-    console.log('b value is =', b)
+    console.log("The numbers after swapping are: " + a + ", " + b);
+    //console.log('b value is =', b)
 }
 swap(65, 13);
