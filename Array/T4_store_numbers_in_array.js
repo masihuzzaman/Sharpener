@@ -8,15 +8,10 @@ function store_numbers(n){
     let i = 0;
     while (x <=n ) {
         arr[i] = x;
-        i++;
-        x++;
-    }
-    x = 1;
-    i = 0;
-    while (x <= n) {
         console.log(arr[i]);
         i++;
-        x++;
+        x++; 
     }
+  
 }
-store_numbers(7);
+store_numbers(4);
