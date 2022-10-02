@@ -10,18 +10,14 @@
 function find_maximum(arr,length){
     /*Function to find the maximum in the array--> arr 
     return the maximum value*/
-    let i = 0;
-    let big;
-    while (i <= length) {
-        if (arr[i] > arr[i++]) {
-        big = arr[i]; 
+    let max = arr[0];
+    for(let i=1; i<arr.length; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
         }
-        else {
-        big = arr[i++];   
-        }
-        i++; console.log(big);
     }
-    //console.log(big);
+    //console.log(max);
+    return max;
 }
 find_maximum([3, 7, 3, 9], 4);
 
