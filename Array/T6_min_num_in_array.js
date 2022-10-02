@@ -6,18 +6,14 @@ Output:-
 -2
 Write a program to return the minimum element in the array.
 */
-let n = 20;
-// 2, 3, 5
-let num;
-let arr = new Array();
-let index = 1;
-arr[0] = 2;
-for (num = 3; num < n; num++) { 
-  for (let divisor = 2; divisor < num; divisor++) {
-    if (num % divisor == 0) {
-      break;
-    } else {
-     arr[index] = num; console.log(arr[index]);
+function find_minimum(arr,length){
+        /*Function to find the minimum in the array--> arr 
+          return the minimum value*/
+let min = arr[0];
+    for(let i=1; i<arr.length; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
     }
-  } index++;
-} //console.log(arr);
+    return min;  
+}
