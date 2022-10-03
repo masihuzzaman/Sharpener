@@ -10,18 +10,26 @@ Output:- Return the output in the form of an array.
 11
 */
 
-let n = 20;
-// 2, 3, 5
-let num;
-let arr = new Array();
-let index = 1;
-arr[0] = 2;
-for (num = 3; num < n; num++) { 
-  for (let divisor = 2; divisor < num; divisor++) {
-    if (num % divisor == 0) {
+
+let n = 2;
+let counter = 0;
+let arr = new Array(20);
+while (counter < 20) {
+  let flag = true;
+  for (let i = 2; i < n; i++) {
+    if (n % i == 0) {
+      //console.log("not a prime");
+      flag = false;
       break;
-    } else {
-     arr[index] = num; console.log(arr[index]);
     }
-  } index++;
-} //console.log(arr);
+  }
+  if (flag) {
+    arr[counter] = n;
+    counter = counter + 1;
+    //console.log("a prime number");
+  } n = n + 1;
+}
+for (i = 0; i < 20; i++) {
+  console.log(arr[i]);
+}
+
