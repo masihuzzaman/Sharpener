@@ -10,26 +10,29 @@ Output:- Return the output in the form of an array.
 11
 */
 
-
-let n = 2;
-let counter = 0;
-let arr = new Array(20);
-while (counter < 20) {
-  let flag = true;
-  for (let i = 2; i < n; i++) {
-    if (n % i == 0) {
-      //console.log("not a prime");
-      flag = false;
-      break;
+function prime_numbers(n) {
+  let m = 2;
+  let i;
+  let counter = 0;
+  let arr = new Array(n);
+  while (counter < n) {
+    let flag = true;
+    for (i = 2; i < m; i++) {
+      if (m % i == 0) {
+        //console.log("not a prime");
+        flag = false;
+        break;
+      }
     }
+    if (flag) {
+      arr[counter] = m;
+      counter = counter + 1;
+      //console.log("a prime number");
+    } m = m + 1;
   }
-  if (flag) {
-    arr[counter] = n;
-    counter = counter + 1;
-    //console.log("a prime number");
-  } n = n + 1;
-}
-for (i = 0; i < 20; i++) {
-  console.log(arr[i]);
-}
+  for (i = 0; i < n; i++) {
+    console.log(arr[i]);
+  }
 
+}
+prime_numbers(20);
