@@ -1,23 +1,22 @@
 /**
 *   Given an array find the maximum in it and return it 
-*   Example:-
-*   Input:-
+*   Example:
+*   Input:
 *   Arr=[5, 4, 7, 2, 6]
-*   Ouput:-
-*   7
+*   Ouput: 7
  **/
 
-function find_maximum(arr,length){
+function find_maximum(arr) {
     /*Function to find the maximum in the array--> arr 
     return the maximum value*/
     let max = arr[0];
-    for(let i=1; i<arr.length; i++) {
-        if(arr[i] > max) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
             max = arr[i];
         }
     }
-    //console.log(max);
+    console.log(max);
     return max;
 }
-find_maximum([3, 7, 3, 9], 4);
+find_maximum([3, 7, 3, 9]);
 
