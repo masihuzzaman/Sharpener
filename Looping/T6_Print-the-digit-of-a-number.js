@@ -18,3 +18,5 @@ function print_digits(n) {
         n = Math.floor(n / 10);
     }
 }
+
+print_digits(1947);
