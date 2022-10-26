@@ -1,3 +1,5 @@
+/* Write a program to print the area and perimeter of a triangle object having sides of 3, 4 and 5 units by creating a class named 'Triangle' and having two functions calculate_area and calculate_perimeter and constructors(parameterized constructor where you assign (3,4,5)) . */
+
 class Triangle {
     constructor(first_side, second_side, third_side) {
         this.side_A = first_side;
