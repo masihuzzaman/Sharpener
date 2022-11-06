@@ -136,15 +136,19 @@ The inverse of the prime number is in parentheses. The final result is O(N * log
 var countPrimes = function (n) {
     let isPrime = new Array(n);
     isPrime.fill(isPrime, true);
-    for (let i = 2; i * i < n; i++)
-        if (isPrime[i])
-            for (let j = i * i; j < n; j += i)
+    for (let i = 2; i * i < n; i++) {
+        if (isPrime[i]) {
+            for (let j = i * i; j < n; j += i) {
                 isPrime[j] = false;
-
+            }
+        }
+    }
     let count = 0;
-    for (let i = 2; i < n; i++)
-        if (isPrime[i]) count++;
-
+    for (let i = 2; i < n; i++) {
+        if (isPrime[i]) {
+            count++;
+        }
+    }
     console.log(count);
     return count;
 };
