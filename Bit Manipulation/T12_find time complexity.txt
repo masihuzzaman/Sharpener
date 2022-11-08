@@ -1,0 +1,25 @@
+What is the time complexity of the following code :
+
+int i, j, k = 0;
+for(i = n/2; i <= n; i++) {
+    for(j = 2; j <= n; j * 2) {
+        k = k + n/2;
+    }
+}
+
+
+If you are thinking o(n^2),0(n) you are wrong. Ask mentor if you still think these are the answer
+
+Write Down the Answer for the above Question in details.
+
+Lets start with the inner for loop. This loop has a statement 'k = k + n/2' which will be calculated once for the value of j starting from 2, incremented by 2 times and terminating for j = n, and this leads to the time complexity of 'log n' as the picking and assignment of the values for 'n' is halved every time, could be understood as following:
+
+n/2^1 , n/2^2, n/2^3, n/2^4.....n/2^y
+
+Here, n/2^y is nothing but 1.
+
+Therefore, 2^y = n or log n = y. This means the inner loop will run 'log n' times as 'y' represents the number of times the loop will run. So, here, the time complexity is of the order of O(log n).
+
+The outer for loop will run n/2 times which gives the O(n/2) or O(n) because for larger values of n, the term n/2 leads to n. 
+
+Therefore the computations performed are n times log n and it leads to the time complexity for the entire code as O(n log n).
