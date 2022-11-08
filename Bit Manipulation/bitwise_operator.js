@@ -63,3 +63,23 @@ console.log(-5 >> 1);
 //      5 = 0000 0101
 //  5>>>1 = 0000 0010   (2)
 console.log(5 >>> 1);
+
+
+//===========================
+//  Converting Decimal to Binary
+//===========================
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+  }
+console.log((15 >>> 0).toString(16))
+console.log((-5 >>> 0).toString(2))
+console.log((5 >>> 0).toString(2))
+
+//===========================
+//  Converting Binary to Decimal
+//===========================
+function bin2dec(bin){
+    return parseInt(bin, 2).toString(10);
+  }
+console.log(parseInt(1111, 2).toString(16))
+console.log(parseInt(101, 2).toString(10))
