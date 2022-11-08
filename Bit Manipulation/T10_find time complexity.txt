@@ -1,0 +1,33 @@
+What is the time complexity of the following code and why ?
+ int a = 0; 
+ for (i = 0; i < N; i++) {
+    for (j = N; j > i; j--) {
+        a = a + i + j;
+    }
+ }
+
+Write Down the Answer for the above Question in details.
+
+Here we have two nested for() loops that acts like multipliers for the code inside the loop.
+
+Inside the inner loop we have a code with constant execution time O(1) and it is just addition of some variables a, i, and j.
+
+The outer for loop will run from i = 0 to i = N-1 means it will run from 0 to N i.e., N times.
+
+The inner loop will run from j = N to j = 1 means it will run N times.
+
+We can see that when i=0 it will run N times, when i=1 itl will run N-1 times and similarly when i=2 the inner loop will run N-2 times and similarly it goes on.
+
+Lets sum the number of times the loops will run as:
+
+N + N-1 + N-2 + N-3 ..... 1
+
+= 1+2+3+4+5 ..... N
+
+= N*(N+1)/2    			// the sum of N natural numbers when the numbers are in arithmetic series
+
+= (N^2)/2 + N/2
+
+Here, the term (N^2)/2 can be considered as N^2 as it is very big number the other terms can be neglected.
+
+Therefore we can say that here the time complexity is O(N^2) means the computer has to do the calculation N^2 order times.
