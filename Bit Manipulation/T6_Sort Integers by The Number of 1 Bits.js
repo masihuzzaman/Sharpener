@@ -24,7 +24,8 @@ Explantion: All integers have 1 bit in the binary representation, you should jus
  * @return {number[]}
  */
 var sortByBits = function (arr) {
-    return arr.sort((a, b) => bitCount(a) - bitCount(b) || a - b);
+    let sortedArray = arr.sort((a, b) => bitCount(a) - bitCount(b) || a - b);
+    console.log(sortedArray);
 };
 const bitCount = num => {
     let sum = 0;
@@ -34,3 +35,6 @@ const bitCount = num => {
     }
     return sum;
 };
+
+let arr = [0,1,2,3,4,5,6,7,8]
+sortByBits(arr)
