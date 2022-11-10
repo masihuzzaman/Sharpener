@@ -2,10 +2,7 @@
 
 Return the array after sorting it.
 
- 
-
 Example 1:
-
 Input: arr = [0,1,2,3,4,5,6,7,8]
 Output: [0,1,2,4,8,3,5,6,7]
 Explantion: [0] is the only integer with 0 bits.
@@ -13,8 +10,8 @@ Explantion: [0] is the only integer with 0 bits.
 [3,5,6] have 2 bits.
 [7] has 3 bits.
 The sorted array by bits is [0,1,2,4,8,3,5,6,7]
-Example 2:
 
+Example 2:
 Input: arr = [1024,512,256,128,64,32,16,8,4,2,1]
 Output: [1,2,4,8,16,32,64,128,256,512,1024]
 Explantion: All integers have 1 bit in the binary representation, you should just sort them in ascending order. */
@@ -33,8 +30,11 @@ const bitCount = num => {
         sum += num & 1;
         num = num >> 1;
     }
+    console.log(sum);
     return sum;
 };
 
-let arr = [0,1,2,3,4,5,6,7,8]
-sortByBits(arr)
+//let arr = [0,1,2,3,4,5,6,7,8]
+//sortByBits(arr)
+bitCount(5)
+ 
