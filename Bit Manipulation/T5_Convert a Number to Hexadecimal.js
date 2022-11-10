@@ -29,7 +29,6 @@ var toHex = function (num) {
         result = hexMap[(num & 15)] + result;
         num = (num >>> 4);
     }
-    //console.log(result);
     console.log(result);
     return result;
 };
