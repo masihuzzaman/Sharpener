@@ -30,7 +30,7 @@ var toHex = function (num) {
         num = (num >>> 4);
     }
     //console.log(result);
+    console.log(result);
     return result;
-
-
 };
+toHex(10)
