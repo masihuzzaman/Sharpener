@@ -35,8 +35,8 @@ var masih = new Employee("Mechanical", "Masih", 33, "9268491427", "Ghaziabad", 4
 var zaman = new Manager("Finance", "Zaman", 34, "926-849-1427", "Sanjay Nagar, Ghaziabad", 54000);
 
 
-console.log(masih.printDetail());
-console.log(zaman.printDetail());
+masih.printDetail();
+zaman.printDetail();
 
 
 
