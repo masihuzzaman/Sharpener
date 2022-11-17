@@ -17,7 +17,14 @@ class Employee extends Member {
         this.specialization = Specialization;
     }
     printDetail() {
-        console.log("The details of the Employee - " + this.name + " are as following :" + "\n Specilization : " + this.specialization + "\n Name : " + this.name + "\n Age : " + this.age + "\n Phone Number " + this.number + "\n Address : " + this.address + "\n Salary : " + this.salary);
+        console.log("The details of the Employee - " + 
+        this.name + " are as following :" + 
+        "\n Specilization : " + this.specialization + 
+        "\n Name : " + this.name + 
+        "\n Age : " + this.age + 
+        "\n Phone Number " + this.number + 
+        "\n Address : " + this.address + 
+        "\n Salary : " + this.salary);
     }
 }
 
@@ -27,7 +34,14 @@ class Manager extends Member {
         this.department = Department;
     }
     printDetail() {
-        console.log("The details of the Manager - " + this.name + " are as following :" + "\n Department : " + this.department + "\n Name : " + this.name + "\n Age : " + this.age + "\n Phone Number " + this.number + "\n Address : " + this.address + "\n Salary : " + this.salary);
+        console.log("The details of the Manager - " + 
+        this.name + " are as following :" + 
+        "\n Department : " + this.department + 
+        "\n Name : " + this.name + 
+        "\n Age : " + this.age + 
+        "\n Phone Number " + this.number + 
+        "\n Address : " + this.address + 
+        "\n Salary : " + this.salary);
     }
 }
 
