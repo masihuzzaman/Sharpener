@@ -16,7 +16,8 @@ var search = function (nums, target) {
             low = mid;
         }
     }
-   /*  target is compared with the nums[low] if the its ture then the index stored in variable 'low' is returned else it returns -1 */
-    return nums[low] == target ? low : -1;
+   /*  target is compared with the nums[low] if its true then the index stored in variable 'low' is returned else it returns -1 */
+    return index = nums[low] == target ? low : -1;
 };
-//search([-1, 0, 3, 5, 9, 12], 9)
+search([-1, 0, 3, 5, 9, 12], 0)
+console.log(index);
