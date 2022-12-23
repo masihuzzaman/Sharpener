@@ -12,7 +12,7 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
  * @return {number}
  */
 
- function Stack() {
+function Stack() {
     this.vals = [];
 }
 
@@ -46,3 +46,4 @@ var largestRectangleArea = function (heights) {
 
     return maxArea;
 };
+console.log(largestRectangleArea([2, 1, 5, 6, 2, 3]));
