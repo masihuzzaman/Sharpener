@@ -1,3 +1,13 @@
+/* use two stacks: stack and reversed
+push:
+    push into stack
+pop:
+    if reversed is empty
+        fill reversed with stack
+    return reversed.pop
+peek:
+    return last item in reversed or first item in stack */
+
 /**
  * Initialize your data structure here.
  */
