@@ -47,6 +47,7 @@ var divide = function (dividend, divisor) {
     if (result >= 2 ** 31) {
         return 2 ** 31 - 1
     }
-    //console.log(result);
+    console.log(result);
     return result
 };
+divide(63, 7)
