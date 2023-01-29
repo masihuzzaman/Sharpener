@@ -1,3 +1,20 @@
+/* Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head. */
+
+/* Example 1:
+Input: head = [1,2,6,3,4,5,6], val = 6
+Output: [1,2,3,4,5]
+
+Example 2:
+Input: head = [], val = 1
+Output: []
+
+Example 3:
+Input: head = [7,7,7,7], val = 7
+Output: [] */
+
+
+
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -10,26 +27,24 @@
  * @param {number} val
  * @return {ListNode}
  */
+
+// One way to remove all nodes with a certain value from a linked list is to iterate through the list, keeping track of the previous node and the current node. If the current node's value equals the target value, we remove the current node by updating the previous node's next pointer to skip the current node and pointing it to the next node.
+
+// This approach has a Time complexity of O(n) where n is the number of nodes in the linked list and a Space complexity of O(1) as it only uses a constant amount of additional memory.
+
 var removeElements = function(head, val) {
-    if (!head) return head;
-	
-	// if head is the value were deleting and if there is any repetition lets handle that case first otherwise we'll just break out of the loop
-    while(head) {
-        if(head.val === val) {
-            head = head.next;
+    // Create dummy node to serve as a placeholder for the head
+    var dummy = new ListNode();
+    dummy.next = head;
+    var prev = dummy;
+    var curr = head;
+    while (curr) {
+        if (curr.val === val) {
+            prev.next = curr.next;
         } else {
-            break;
+            prev = curr;
         }
+        curr = curr.next;
     }
-    
-	// skip any nodes whos values match the parameters and set it to the node after
-	// if the node is found, set curr.next to the node after it then try again
-	// otherwise iterate forward
-    let curr = head;
-    while(curr && curr.next) {
-        if (curr.next.val === val) curr.next = curr.next.next;
-        else curr = curr.next;
-    }
-    
-    return head;
-};
+    return dummy.next;
+}
