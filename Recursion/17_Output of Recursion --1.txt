@@ -1,0 +1,25 @@
+What will be the output (If the answer is INFINITY WRITE DOWN WHY):-
+
+   print(count(1));  //function call   print the output that you get
+
+  function count(int i)     //this is the function 
+  {
+    if(i>5)
+    {
+      return 0;
+    }
+    else 
+    {
+      return i*count(i+1);
+    }
+  }
+
+Write Down the output and why you are getting this  for the above Question.
+
+Answer:
+
+The output of the program would be 0.
+
+The count function is a recursive function that takes an integer i as input. If i is greater than 5, the function returns 0. Otherwise, it returns i multiplied by the result of calling itself with i + 1 as input.
+
+The function count is called with 1 as input, and the value of i starts with 1. At each recursive call, the value of i is increased by 1 until it reaches 6, at which point the function returns 0. The results of each recursive call are multiplied together and returned as the final result, which is 0 it would have been 120 for the base function return = 1..
