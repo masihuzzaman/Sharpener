@@ -1,0 +1,34 @@
+Task details:
+
+Write down the output of the following Question:-
+   count(1);   function call 
+ function count(int i) 
+  {
+    if(i==6)
+    {
+      return;
+    }
+    else 
+    {
+      print(i);
+      count(i+1);
+    }
+  }
+
+Write Down the output and why you are getting this  for the above Question.
+The output of the program would be the numbers 1 to 5 printed to the console:
+
+1
+
+2 
+
+3 
+
+4 
+
+5 
+
+
+The count function is a recursive function that takes an integer i as input. If i is equal to 6, the function returns without any value. Otherwise, it logs the value of i to the console and calls itself with i + 1 as input.
+
+The function count is called with 1 as input, and the value of i starts with 1. At each recursive call, the value of i is increased by 1 until it reaches 6, at which point the function returns without a value. Each call to print logs the current value of i to the console, so the output is the numbers 1 to 5 printed to the console.
