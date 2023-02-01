@@ -1,0 +1,24 @@
+Task details:
+   print(count(1)); //print the output 
+   function count(int i)   //function count
+  {
+    if(i==5)
+    {
+      return 0;
+    }
+    else 
+    {
+      return i+count(i+3);
+    }
+  }
+
+
+Write Down the output and why you are getting this  for the above Question.
+
+Your Answer:
+
+The output of the program would lead to infinity, and it would cause an infinite loop.
+
+The count function is a recursive function that takes an integer i as input. If i is equal to 5, the function returns 0. Otherwise, it returns i plus the result of calling itself with i + 3 as input.
+
+The function count is called with 1 as input, and the value of i starts with 1. At each recursive call, the value of i is increased by 3. However, there is no condition in the code to stop the recursion, so the function will continue to call itself indefinitely. This will cause an infinite loop,
