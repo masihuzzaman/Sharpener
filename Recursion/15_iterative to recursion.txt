@@ -1,0 +1,54 @@
+Task details
+Write a program to convert the following program in bold into its recursive format.
+
+Iterative Code :-
+
+int sum =0;
+int n=5;  (you can take any number manually)
+
+for(int i=0;i<10;i=i+2){
+if(i==n){
+break;
+}
+sum =sum+i;
+}
+System.out.println(sum);
+
+Convert it into recursive format and copy paste your answer here
+
+Write Down the Entire Code for the above Question in your IDE and copy paste the code here.
+
+Solution:
+
+The equivalent JavaScript code for the iterative code would be like this:
+
+let sum = 0;
+let n = 5;
+
+for (let i = 0; i < 10; i = i + 2) {
+ if (i == n) {
+  break;
+ }
+ sum = sum + i;
+}
+
+console.log(sum);
+
+The equivalent recursive version of the code would look like this:
+
+let sum = 0;
+let n = 5;
+let i = 0;
+
+function findSum(i) {
+ if (i == n) {
+  return sum;
+ }
+ if (i < 10) {
+  sum = sum + i;
+  return findSum(i + 2);
+ }
+}
+
+console.log(findSum(i));
+
