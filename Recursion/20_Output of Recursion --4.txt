@@ -1,0 +1,36 @@
+Task details:
+
+Write down the output of the following code :-
+
+   count(1);  //function call 
+
+  function count(int i)
+  {
+    if(i==6)
+    {
+      return;
+    }
+    else 
+    {
+      count(i+1);
+      print(i);
+    }
+  }
+
+Write Down the output and why you are getting this  for the above Question.
+The output of the program would be the numbers 5 to 1 printed to the console:
+
+
+5
+
+4 
+
+3 
+
+2 
+
+1 
+
+The count function is a recursive function that takes an integer i as input. If i is equal to 6, the function returns without any value. Otherwise, it calls itself with i + 1 as input and then logs the value of i to the console.
+
+The function count is called with 1 as input, and the value of i starts with 1. At each recursive call, the value of i is increased by 1 until it reaches 6, at which point the function returns without a value. Here, the LIFO order is seen in the function count. Each time the function calls itself with an increased value of i, it pushes a new function call onto the call stack. When the base case if(i==6) is reached, each function call returns and the value of i associated with each call is logged to the console. Because the last function call to be added to the stack is the first one to be returned, the values of i are logged to the console in reverse order, giving us the LIFO behavior.
