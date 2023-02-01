@@ -1,0 +1,57 @@
+Task details
+
+Write down the output of the following Code :-
+
+   count(1);  //function call 
+
+  function count(int i)
+  {
+    if(i==6)
+    {
+      "Line change to new line"   
+      return;
+    }
+    else 
+    {
+      print(i);
+      count(i+1);
+      print(i);
+    }
+  }
+
+
+Write Down the output and why you are getting this  for the above Question.Your Answer
+
+The output will be:
+
+1 
+
+2 
+
+3 
+
+4 
+
+5 
+
+Line change to new line
+
+5 
+
+4 
+
+3 
+
+2 
+
+1 
+
+Explanation:
+
+The initial call count(1) starts the recursion. It logs 1 to the console, then calls count(2).
+
+count(2) logs 2 to the console, then calls count(3).
+
+The same pattern continues with each call, logging the current value of i, then calling count(i + 1). When i reaches 6, the function returns and stops making further recursive calls.
+
+Finally, the recursive calls start returning, and each call logs the current value of i again, resulting in the output 
