@@ -1,0 +1,34 @@
+/* Task details:
+
+Write a function which will take the input n from the user and return back an integer which will contain the sum of n natural number .
+
+Example input n=5
+
+return 1+2+3+4+5 = 15 will be returned back from the function
+
+Write Down the Entire Code for the above Question in your IDE and copy paste the code here.
+
+
+Your Answer: */
+
+function sumOfFirstNNaturalNumbers(n) {
+
+ if (n === 1) {
+  return 1;
+ }
+ return n + sumOfFirstNNaturalNumbers(n - 1);
+}
+
+let n = 5;
+
+console.log(`The sum of the first ${n} natural numbers is`, sumOfFirstNNaturalNumbers(n));
+
+/* Explanation:
+
+The function sumOfFirstNNaturalNumbers takes an integer n as input.
+If n is equal to 1, the function returns 1, which is the first natural number.
+If n is not equal to 1, the function returns n plus the sum of n-1 natural numbers, which is calculated by calling the same function sumOfFirstNNaturalNumbers with n-1 as input.
+The function keeps calling itself with a decremented n until n becomes 1.
+At each call, the result is accumulated in the form of a sum and returned back to the previous call.
+The final result is the sum of the first n natural numbers.
+In the end, the result is logged to the console. */
