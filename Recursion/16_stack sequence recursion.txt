@@ -1,0 +1,31 @@
+Write down the stack sequence(Given in comment) and what will be output .. Note- don't run it in your compiler :)
+
+  count(1); //calling the function count
+  function count(int i) //count function
+  {
+    if(i>5)
+    {
+
+ //Print the elements inside the stack from top to bottom 
+      return 0;
+    }
+    else 
+    {
+      return count(i+1);
+    }
+  }
+
+Your Answer:
+
+The stack sequence would be:
+
+count(1)
+count(2)
+count(3)
+count(4)
+count(5)
+count(6)
+
+The function returns 0 when the value of i is greater than 5, so the first return statement would be at the count(6) function call. The rest of the calls in the stack would be popped off one by one, until the final return statement at count(1) is executed.
+
+The output would be: 0
