@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+<!-- <ol>
+  <li>manipulate the DOM
+    Make the first li tag which has HELLO -- green in color.
+    </li>
+    <li>Make the second li tag yellow in color.</li>
+</ol> -->
+  <body>
+    <ul>
+      <li>HELLO</li>
+      <li>WORLD</li>
+    </ul>
+
+    <script>
+      const firstLi = document.querySelector("li:first-child");
+      firstLi.style.color = "green";
+
+      const secondLi = document.querySelector("li:nth-child(2)");
+      secondLi.style.color = "yellow";
+    </script>
+  </body>
+</html>
