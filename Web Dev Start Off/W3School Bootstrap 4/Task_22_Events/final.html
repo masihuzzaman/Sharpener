@@ -1,0 +1,43 @@
+<!-- HTML code -->
+
+<form id="myForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" />
+  <button type="submit" id="submitButton">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById("myForm");
+  const usernameInput = document.getElementById("username");
+  const submitButton = document.getElementById("submitButton");
+
+  // click event
+  submitButton.addEventListener("click", () => {
+    console.log("Button clicked!");
+  });
+
+  // mouseover event
+  submitButton.addEventListener("mouseover", () => {
+    console.log("Mouse over button!");
+  });
+
+  // mouseout event
+  submitButton.addEventListener("mouseout", () => {
+    console.log("Mouse out of button!");
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent the default form submission
+
+    const username = usernameInput.value.trim(); // get the input value and remove any leading/trailing white space
+
+    if (username === "") {
+      console.log("Username cannot be empty!");
+    } else if (username.length < 3) {
+      console.log("Username must be at least 3 characters long!");
+    } else {
+      console.log("Username:", username);
+      form.reset(); // clear the form inputs
+    }
+  });
+</script>
