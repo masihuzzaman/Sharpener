@@ -1,0 +1,23 @@
+<!-- HTML code -->
+<input type="text" id="myInput">
+<button id="myButton">Click me</button>
+
+<script>
+  const input = document.getElementById('myInput');
+  const button = document.getElementById('myButton');
+
+  // click event
+  button.addEventListener('click', () => {
+    console.log('Button clicked!');
+  });
+
+  // mouseover event
+  button.addEventListener('mouseover', () => {
+    console.log('Mouse over button!');
+  });
+
+  // mouseout event
+  button.addEventListener('mouseout', () => {
+    console.log('Mouse out of button!');
+  });
+</script>
