@@ -19,7 +19,7 @@ document.title = 'Sharpener Play Ground : DOM'
 // header.style.borderBottom = 'solid 5px red';
 
 //GETELEMENTBYCLASSNAME
-var items = document.getElementsByClassName('list-group-item');
+var li = document.getElementsByTagName('li');
 // console.log(items);
 // console.log(items[1]);
 // items[1].textContent = 'Hello 2';
@@ -33,9 +33,10 @@ var items = document.getElementsByClassName('list-group-item');
 //     items[i].style.backgroundColor = 'grey';
 // }
 
-items[2].style.backgroundColor = 'green';
+// li[2].style.backgroundColor = 'grey';
 
-for(var i = 0; i < items.length; i++) {
-    items[i].style.fontWeight = 'bold';
-    items[i].style.color = 'red';   
+for(var i = 0; i < li.length; i++) {
+    li[i].style.fontWeight = 'bold';
+    li[i].style.color = '#fff';  
+    li[i].style.backgroundColor = 'grey'
 }
