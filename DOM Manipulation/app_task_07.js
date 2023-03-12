@@ -75,10 +75,15 @@ container.insertBefore(newDiv, h1);
 
 var items = document.querySelector('#items');
 
-var li = document.createElement('li');
-li.className = 'list-group-item';
-var newLiText = document.createTextNode('Item 0');
-li.appendChild(newLiText);
+var newLi = document.createElement('li');
+newLi.className = 'list-group-item';
+var newLiText = document.createTextNode('Hello World');
+newLi.appendChild(newLiText);
 
 
+var ul = document.querySelector('#items')
+var li = document.querySelector('li')
 
+ul.insertBefore(newLi, li)
+console.log(ul);
+console.log(li);
