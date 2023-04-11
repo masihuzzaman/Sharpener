@@ -21,6 +21,7 @@ function onSubmit(e) {
         userList.appendChild(li);
 
         localStorage.setItem(nameInput.value, emailInput.value);
+        console.log(localStorage.getItem(nameInput.value));
 
         // Clear fields
         nameInput.value = '';
