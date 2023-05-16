@@ -15,13 +15,18 @@ function onSubmit(e) {
 
         setTimeout(() => msg.remove(), 3000);
     } else {
+        const user = {
+            name: nameInput.value,
+            email: emailInput.value
+        };
+
         const li = document.createElement('li');
-        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+        li.appendChild(document.createTextNode(`${user.name} : ${user.email}`));
 
+        // Store User Information as an Object
+        localStorage.setItem('user', JSON.stringify(user));
+        console.log(user);
         userList.appendChild(li);
-
-        localStorage.setItem(nameInput.value, emailInput.value);
-        console.log(localStorage.getItem(nameInput.value));
 
         // Clear fields
         nameInput.value = '';
