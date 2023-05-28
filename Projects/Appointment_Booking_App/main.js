@@ -24,7 +24,7 @@ function onSubmit(e) {
         li.appendChild(document.createTextNode(`${user.name} : ${user.email}`));
 
         // Store User Information as an Object
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem(user.email, JSON.stringify(user));
         console.log(user);
         userList.appendChild(li);
 
