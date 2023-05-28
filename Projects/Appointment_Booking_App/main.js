@@ -4,6 +4,12 @@ const emailInput = document.querySelector('#email');
 const msg = document.querySelector('.msg');
 const userList = document.querySelector('#users');
 
+// Retrieve existing users from local storage or initialize an empty array
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
+// Populate the user list with existing users on page load
+populateUserList();
+
 myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
@@ -17,7 +23,8 @@ function onSubmit(e) {
       email: emailInput.value,
     };
 
-    localStorage.setItem(user.email, JSON.stringify(user)); // Store the user object with the email as the key in local storage
+    users.push(user); // Add the new user to the users array
+    localStorage.setItem('users', JSON.stringify(users)); // Store the updated array in local storage
     populateUserList(); // Update the user list on the page
 
     showMessage('User added successfully', 'success');
@@ -30,14 +37,11 @@ function onSubmit(e) {
 function populateUserList() {
   userList.innerHTML = ''; // Clear the user list before populating it again
 
-  for (let i = 0; i < localStorage.length; i++) {
-    const email = localStorage.key(i);
-    const user = JSON.parse(localStorage.getItem(email));
-
+  users.forEach((user) => {
     const li = document.createElement('li');
     li.appendChild(document.createTextNode(`${user.name} : ${user.email}`));
     userList.appendChild(li);
-  }
+  });
 }
 
 function showMessage(message, className) {
