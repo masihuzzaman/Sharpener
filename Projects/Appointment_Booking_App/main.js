@@ -7,29 +7,45 @@ const userList = document.querySelector('#users');
 myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    if(nameInput.value === '' || emailInput.value === '') {
-        msg.classList.add('error');
-        msg.innerHTML = 'Please enter all fields';
+  if (nameInput.value === '' || emailInput.value === '') {
+    showMessage('Please enter all fields', 'error');
+  } else {
+    const user = {
+      name: nameInput.value,
+      email: emailInput.value,
+    };
 
-        setTimeout(() => msg.remove(), 3000);
-    } else {
-        const user = {
-            name: nameInput.value,
-            email: emailInput.value
-        };
+    localStorage.setItem(user.email, JSON.stringify(user)); // Store the user object with the email as the key in local storage
+    populateUserList(); // Update the user list on the page
 
-        const li = document.createElement('li');
-        li.appendChild(document.createTextNode(`${user.name} : ${user.email}`));
+    showMessage('User added successfully', 'success');
 
-        // Store User Information as an Object
-        localStorage.setItem(user.email, JSON.stringify(user));
-        console.log(user);
-        userList.appendChild(li);
+    nameInput.value = ''; // Clear fields
+    emailInput.value = '';
+  }
+}
 
-        // Clear fields
-        nameInput.value = '';
-        emailInput.value = '';
-    }
+function populateUserList() {
+  userList.innerHTML = ''; // Clear the user list before populating it again
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const email = localStorage.key(i);
+    const user = JSON.parse(localStorage.getItem(email));
+
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(`${user.name} : ${user.email}`));
+    userList.appendChild(li);
+  }
+}
+
+function showMessage(message, className) {
+  msg.textContent = message;
+  msg.className = `msg ${className}`;
+
+  setTimeout(() => {
+    msg.textContent = '';
+    msg.className = 'msg';
+  }, 3000);
 }
