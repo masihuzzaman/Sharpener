@@ -28,7 +28,7 @@ console.log(countVowels("Masihuzzaman Ansari")); */
 
 function countVowels(inputStr) {
   // Define a set of vowels (both lowercase and uppercase).
-  const vowels = new Set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]);
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
   // Initialize a variable to count the vowels.
   let vowelCount = 0;
@@ -36,7 +36,7 @@ function countVowels(inputStr) {
   // Iterate through each character in the input string.
   for (const char of inputStr) {
     // Check if the character is a vowel.
-    if (vowels.has(char)) {
+    if (vowels.includes(char)) {
       vowelCount++;
     }
   }
