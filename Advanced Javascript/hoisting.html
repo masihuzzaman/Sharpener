@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-  <head>
-    <title>Hoisting in Javascript</title>
-  </head>
-  <script>
- 
-  </script>
-  <body>
-    <h2>Hoising in Javascript</h2>
-  </body>
+
+<head>
+  <title>Hoisting in Javascript</title>
+</head>
+<script>
+  var a = 50;
+
+  {
+
+    var a = 30;
+
+    let b = 20;
+
+    let c = 30;
+
+  }
+
+
+  console.log(a)
+</script>
+
+<body>
+  <h2>Hoising in Javascript</h2>
+</body>
+
 </html>
